@@ -41,27 +41,5 @@ for rss in sources:
     fieldsets.append(fieldset)
 
 common_fields = set.intersection(*fieldsets)
+print ("Common fields for all RSS feeds: ")
 print(common_fields)
-# ~ for fieldset in fieldsets:
-    # ~ print(fieldset)
-
-
-    # ~ print (f['feed']['title'])
-    # ~ print (f['feed']['link'])
-    # ~ print (f['feed']['language'])
-    # ~ print (f['feed']['rights'])
-    # ~ print (f['feed']['author'])
-    # ~ print (f['feed']['published'])
-    # ~ print (f['feed']['updated'])
-    # ~ print (f['feed']['tags'])
-
-    # ~ for entry in f['entries']:
-        # ~ for node in entry:
-            # ~ print("\t%s: %s" % (node, entry[node]))
-
-    # ~ for node in f['feed']:
-        # ~ print("\t%s: %s" % (node, f['feed'][node]))
-    # ~ fname = "%s.txt" % sname.lower()
-    # ~ print(fname)
-    # ~ with open(fname, 'w') as feed:
-        # ~ feed.write(str(f))
