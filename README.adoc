@@ -1,2 +1,4 @@
 = Newspaper
+
+== Description
 Create a newspaper from rss sources
