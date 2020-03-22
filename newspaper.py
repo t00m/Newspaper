@@ -1,6 +1,6 @@
 import feedparser
 
-# ~ sources = open('rss.txt', 'r').readlines()
+feeds = {}
 sources = open('rss.txt', 'r').read().splitlines()
 
 def get_rss_data(rss):
@@ -24,22 +24,34 @@ def get_chanel_info(channel):
 
 fieldsets = []
 for rss in sources:
-    print(rss)
+    # ~ print(rss)
+    if rss.startswith('#'):
+        continue
+    feeds[rss] = {}
     channel, entries = get_rss_data(rss)
-    # ~ header = get_chanel_info(channel)
     fieldset = set()
+    feeds[rss]['header']={}
     for field in channel:
         fieldset.add(field)
-        # ~ print(type(channel[field]))
         if isinstance(channel[field], str):
-            print ("\t%s -> %s" % (field, channel[field]))
+            feeds[rss]['header'][field] = channel[field]
+            # ~ print ("\t%s -> %s" % (field, channel[field]))
         elif isinstance(channel[field], feedparser.FeedParserDict):
-            print ("\t%s" % field)
+            # ~ print ("\t%s" % field)
             for key in channel[field]:
-                print ("\t\t%s => %s" % (key, channel[field][key]))
-    print("")
+                pass
+                # ~ print ("\t\t%s => %s" % (key, channel[field][key]))
+    # ~ print("")
     fieldsets.append(fieldset)
 
-common_fields = set.intersection(*fieldsets)
-print ("Common fields for all RSS feeds: ")
-print(common_fields)
+# ~ common_fields = set.intersection(*fieldsets)
+# ~ print ("Common fields for all RSS feeds: ")
+# ~ print(common_fields)
+# ~ {'links', 'subtitle', 'title', 'title_detail', 'subtitle_detail', 'link'}
+for rss in feeds:
+    print (feeds[rss]['header']['title'])
+    # ~ print ("\t%s" % feeds[rss]['header']['title_detail'])
+    print ("\t%s" % feeds[rss]['header']['subtitle'])
+    # ~ print ("\t%s" % feeds[rss]['header']['subtitle_detail'])
+    print ("\t%s" % feeds[rss]['header']['link'])
+    print ("")
