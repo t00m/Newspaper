@@ -3,15 +3,9 @@ https://ec.europa.eu/luxembourg/rss.xml_en
 https://www.eubusiness.com/europe/luxembourg/aggregator/RSS
 https://www.theguardian.com/world/luxembourg/rss
 https://rsf.org/en/country/rss.xml?country=122
-#http://www.lessentiel.lu/fr/
-http://www.lessentiel.lu/rss/front.tmpl
-https://www.presseportal.de/rss/dienststelle_117701.rss2
-https://www.presseportal.de/rss/r/Trier.rss2
 https://today.rtl.lu/rss/headlines
 https://today.rtl.lu/rss/news
 https://today.rtl.lu/rss/life
 https://today.rtl.lu/rss/culture
 https://today.rtl.lu/rss/sport
 https://today.rtl.lu/rss/luxembourg
-https://news-trier.de/feed/
-https://www.volksfreund.de/nachrichten/feed.rss
